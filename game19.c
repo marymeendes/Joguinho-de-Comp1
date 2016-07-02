@@ -738,20 +738,16 @@ void collisionEnemy(SDL_Window *window, GameState *game)
 	}
 }
 
-void collisionPvE(GameState *game)
+void collisionPvE(GameState *game, int i)
 {
-	int i;
 
-	for(i=0; i<4; i++)
-	{
-		if (game->enemies[i].x+30 <= game->girl.x+60 && game->enemies[i].x+30 >= game->girl.x)
-		{ 
-	    	if(game->enemies[i].y+10 <= game->girl.y+90 && game->enemies[i].y+10 >= game->girl.y)
-	   	  	{
-	   	   			game->girl.alive = 0;
-	   	   	}
-	    }
-	}
+	if (game->enemies[i].x+30 <= game->girl.x+60 && game->enemies[i].x+30 >= game->girl.x)
+	{ 
+    	if(game->enemies[i].y+10 <= game->girl.y+90 && game->enemies[i].y+10 >= game->girl.y)
+   	  	{
+   	   			game->girl.alive = 0;
+   	   	}
+    }
 }
 
 void bulletLogic (GameState *game) 
@@ -794,10 +790,9 @@ void bulletLogic (GameState *game)
 	{
 		if(game->enemies[j].alive == 1)
 		{
-			collisionPvE(game);
+			collisionPvE(game, j);
 		}
 	}
-
 }
 
 void quitGame (SDL_Window *window, GameState *game)
