@@ -792,7 +792,7 @@ void bulletLogic (GameState *game)
 
 	for(j=0; j<4; j++)
 	{
-		if(game->enemies[i].alive == 1)
+		if(game->enemies[j].alive == 1)
 		{
 			collisionPvE(game);
 		}
