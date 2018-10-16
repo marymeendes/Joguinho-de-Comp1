@@ -1,8 +1,3 @@
-# hello-world
-Faculdade - CCOMP
+# Joguinho Comp1
 
-Olá, 
-
-Neste repositório serão salvos diversos exercícios feitos por mim, Mariana Mendes da Silva, ao longo do meu curso de Ciência da Computação na UFRRJ.
-
-Bye.
+Neste repositório encontram-se o código e imagens da primeira atividade acadêmica do curso de Ciência da Computação da UFRRJ: A AA de Computação I, que consiste da produção de um jogo em C + SDL.
